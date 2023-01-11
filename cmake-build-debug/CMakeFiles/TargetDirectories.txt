@@ -1,0 +1,3 @@
+C:/Users/ism65/CLionProjects/Mayorista/cmake-build-debug/CMakeFiles/Mayorista.dir
+C:/Users/ism65/CLionProjects/Mayorista/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/ism65/CLionProjects/Mayorista/cmake-build-debug/CMakeFiles/rebuild_cache.dir
