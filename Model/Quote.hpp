@@ -19,6 +19,7 @@ private:
 public:
     Quote(string, string, string, string, string, int);
     ~Quote();
+    int getTotal();
 };
 
 

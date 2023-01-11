@@ -12,3 +12,11 @@ Quote::Quote(string id, string createdDate, string createdTime, string sellerCod
     this->itemId = itemId;
     this->quantity = quantity;
 }
+
+Quote::~Quote() {
+
+}
+
+int Quote::getTotal() {
+    return 0;
+}
