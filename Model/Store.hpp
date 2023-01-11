@@ -15,6 +15,8 @@ private:
 public:
     Store(string, string);
     ~Store();
+    string getName();
+    string getAddress();
 };
 
 
