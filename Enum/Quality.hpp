@@ -6,8 +6,9 @@
 #define MAYORISTA_QUALITY_HPP
 
 
-class Quality {
-
+enum class Quality {
+    Standard,
+    Premium
 };
 
 
