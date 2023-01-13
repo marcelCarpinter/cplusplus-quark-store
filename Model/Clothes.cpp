@@ -18,10 +18,6 @@ string Clothes::getQuality() {
     return this->quality;
 }
 
-int Clothes::getPrice() {
-    return this->price;
-}
-
 int Clothes::getQuantity() {
     return this->quantity;
 }

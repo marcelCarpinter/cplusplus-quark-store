@@ -17,7 +17,7 @@ public:
     Clothes(string, int, int);
     ~Clothes();
     string getQuality();
-    int getPrice();
+    virtual int getPrice() = 0;
     int getQuantity();
 };
 
