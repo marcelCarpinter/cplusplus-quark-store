@@ -15,6 +15,7 @@ public:
     Pant(string, int, int, bool);
     ~Pant();
     bool isNormal();
+    int getPrice() override;
 };
 
 

@@ -20,3 +20,24 @@ string Shirt::getNeck() {
 string Shirt::getSleeve() {
     return this->sleeve;
 }
+
+int Shirt::getPrice() {
+    if( this->shortSleeve() ){
+        this->price = this->price - (this->price * 0.1);
+    }
+    if ( !this->normalNeck() ){
+        this->price = this->price + (this->price * 0.03);
+    }
+    /*if(this->getQuality() === 'Premium'){
+        this->price = this->price + (this->price * 0.3);
+    }*/
+    return this->price;
+}
+
+bool Shirt::normalNeck() {
+    return false;
+}
+
+bool Shirt::shortSleeve() {
+    return false;
+}

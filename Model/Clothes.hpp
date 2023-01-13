@@ -11,9 +11,9 @@ using namespace std;
 class Clothes {
 private:
     string quality;
-    int price;
     int quantity;
 public:
+    int price;
     Clothes(string, int, int);
     ~Clothes();
     string getQuality();

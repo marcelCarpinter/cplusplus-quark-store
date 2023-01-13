@@ -13,11 +13,14 @@ class Shirt: public Clothes {
 private:
     string sleeve;
     string neck;
+    bool shortSleeve();
+    bool normalNeck();
 public:
     Shirt(string, int, int, string, string);
     ~Shirt();
     string getNeck();
     string getSleeve();
+    int getPrice() override;
 };
 
 
