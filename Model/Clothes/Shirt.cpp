@@ -28,9 +28,10 @@ int Shirt::getPrice() {
     if ( !this->normalNeck() ){
         this->price = this->price + (this->price * 0.03);
     }
-    /*if(this->getQuality() === 'Premium'){
+    string quality = this->getQuality();
+    if(quality == "premium"){
         this->price = this->price + (this->price * 0.3);
-    }*/
+    }
     return this->price;
 }
 
