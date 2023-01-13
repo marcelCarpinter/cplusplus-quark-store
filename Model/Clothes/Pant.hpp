@@ -12,7 +12,7 @@ class Pant: public Clothes {
 private:
     bool normal;
 public:
-    Pant(string unnamed, int unnamed1, int unnamed2, bool);
+    Pant(string, int, int, bool);
     ~Pant();
     bool isNormal();
 };
