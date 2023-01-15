@@ -5,9 +5,14 @@
 #ifndef MAYORISTA_IVIEW_HPP
 #define MAYORISTA_IVIEW_HPP
 
+using namespace std;
+
+#include <string>
 
 class IView {
-
+public:
+    virtual ~IView() = default;
+    virtual void showText(const string& text) = 0;
 };
 
 
