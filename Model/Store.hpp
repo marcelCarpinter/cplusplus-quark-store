@@ -7,16 +7,19 @@
 
 using namespace std;
 #include <string>
+#include "Seller.hpp"
 
 class Store {
 private:
     string name;
     string address;
+    Seller* seller;
 public:
-    Store(string, string);
+    Store(string name, string address, Seller* seller);
     ~Store();
     string getName();
     string getAddress();
+    Seller getSeller();
 };
 
 
