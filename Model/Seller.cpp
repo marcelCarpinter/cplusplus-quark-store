@@ -2,7 +2,7 @@
 // Created by Marcel on 11/1/2023.
 //
 
-#include "Seller.h"
+#include "Seller.hpp"
 
 Seller::Seller(string name, string lastname, string code) {
     this->name = name;
@@ -10,9 +10,7 @@ Seller::Seller(string name, string lastname, string code) {
     this->code = code;
 }
 
-Seller::~Seller() {
-
-}
+Seller::~Seller() = default;
 
 string Seller::getName() {
     return this->name;
