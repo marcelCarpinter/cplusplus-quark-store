@@ -15,6 +15,8 @@ private:
     Store* store = nullptr;
 public:
     Presentation(IView* view);
+    ~Presentation();
+    string getStoreInfo();
 };
 
 
