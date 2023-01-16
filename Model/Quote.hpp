@@ -17,7 +17,7 @@ private:
     string itemId;
     int quantity;
 public:
-    Quote(string, string, string, string, string, int);
+    Quote(string id, string createdDate, string createdTime, string sellerCode, string itemId, int quantity);
     ~Quote();
     int getTotal();
 };
