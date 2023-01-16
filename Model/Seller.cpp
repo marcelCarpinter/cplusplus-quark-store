@@ -23,3 +23,11 @@ string Seller::getLastname() {
 string Seller::getCode() {
     return this->code;
 }
+
+std::vector<Quote *> Seller::getQuotes() {
+    return this->quotes;
+}
+
+void Seller::addQuote(Quote* quote) {
+    this->quotes.push_back(quote);
+}
