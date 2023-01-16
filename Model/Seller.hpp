@@ -1,5 +1,5 @@
-#ifndef MAYORISTA_SELLER_H
-#define MAYORISTA_SELLER_H
+#ifndef MAYORISTA_SELLER_HPP
+#define MAYORISTA_SELLER_HPP
 
 using namespace std;
 #include <string>
@@ -10,7 +10,7 @@ private:
     string lastname;
     string code;
 public:
-    Seller(string, string, string);
+    Seller(string name, string lastname, string code);
     ~Seller();
     string getName();
     string getLastname();
@@ -18,4 +18,4 @@ public:
 };
 
 
-#endif //MAYORISTA_SELLER_H
+#endif //MAYORISTA_SELLER_HPP
