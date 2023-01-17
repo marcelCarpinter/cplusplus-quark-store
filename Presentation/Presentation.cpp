@@ -9,6 +9,31 @@ Presentation::Presentation(IView* view)
     this->view = view;
     auto seller = new Seller("Marcel", "Carpinter", "S001");
     auto store = new Store("Quark Store", "Fake Street, 123", seller);
+
+    //Manga Corta
+    //Cuello Mao
+    store->addClothes(new Shirt(Quality::Standard, 10, 100, false, true));
+    store->addClothes(new Shirt(Quality::Premium, 10, 100, false, true));
+    //Cuello Normal
+    store->addClothes(new Shirt(Quality::Standard, 10, 150, true, true));
+    store->addClothes(new Shirt(Quality::Premium, 10, 150, true, true));
+
+    //Manga Larga
+    //Cuello Mao
+    store->addClothes(new Shirt(Quality::Standard, 10, 75, false, true));
+    store->addClothes(new Shirt(Quality::Premium, 10, 75, false, true));
+    //Cuello Normal
+    store->addClothes(new Shirt(Quality::Standard, 10, 175, true, true));
+    store->addClothes(new Shirt(Quality::Premium, 10, 175, true, true));
+
+    //Pantalón
+    //Chupin
+    store->addClothes(new Pant(Quality::Standard, 10, 750, false));
+    store->addClothes(new Pant(Quality::Premium, 10, 750, false));
+    //Normales
+    store->addClothes(new Pant(Quality::Standard, 10, 250, true));
+    store->addClothes(new Pant(Quality::Premium, 10, 250, true));
+
     this->store = store;
 }
 
