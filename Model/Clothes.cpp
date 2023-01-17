@@ -21,3 +21,7 @@ string Clothes::getQuality() {
 int Clothes::getQuantity() {
     return this->quantity;
 }
+
+Clothes::Clothes() {
+
+}

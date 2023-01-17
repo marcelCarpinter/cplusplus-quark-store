@@ -14,6 +14,7 @@ private:
     int quantity;
 public:
     int price;
+    Clothes();
     Clothes(string, int, int);
     ~Clothes();
     string getQuality();
