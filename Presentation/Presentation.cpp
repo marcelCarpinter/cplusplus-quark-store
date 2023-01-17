@@ -99,3 +99,56 @@ string Presentation::generateQuoteCode(){
     return "QID_" + to_string(totalQuotes + 1);
 }
 
+bool Presentation::hasStock(Clothes *clothes, int quantity) {
+    Shirt* requestedItem = dynamic_cast<Shirt*>(clothes);
+    if(requestedItem != nullptr){
+        Shirt* s = this->findShirt(clothes);
+        return s->getQuantity() >= quantity;
+    }
+    Pant* p = this->findPant(clothes);
+    return p->getQuantity() >= quantity;
+}
+
+int Presentation::currentStock(Clothes *clothes) {
+    Shirt* shirt = dynamic_cast<Shirt*>(clothes);
+    if(shirt != nullptr){
+        Shirt* s = this->findShirt(clothes);
+        return s->getQuantity();
+    }
+    Pant* p = this->findPant(clothes);
+    return p->getQuantity();
+}
+
+Shirt *Presentation::findShirt(Clothes *clothes) {
+    auto clothesList = this->store->getClothesList();
+    Shirt* shirt = dynamic_cast<Shirt*>(clothes);
+    if(shirt == nullptr)
+        return nullptr;
+    for( Clothes* item : clothesList){
+        Shirt* shirtInStock = dynamic_cast<Shirt*>(item);
+        if(shirtInStock != nullptr){
+            bool sameShirtSleeve = shirtInStock->isShortSleeve() && shirtInStock->isShortSleeve();
+            bool sameShirtNeck = shirtInStock->isNormalNeck() && shirtInStock->isNormalNeck();
+            if(sameShirtNeck && sameShirtSleeve){
+                return shirtInStock;
+            }
+        }
+    }
+    return nullptr;
+}
+
+Pant *Presentation::findPant(Clothes *clothes) {
+    auto clothesList = this->store->getClothesList();
+    Pant* pant = dynamic_cast<Pant*>(clothes);
+    if(pant == nullptr)
+        return nullptr;
+    for( Clothes* item : clothesList){
+        Pant* pantInStock = dynamic_cast<Pant*>(item);
+        if(pantInStock != nullptr){
+            bool samePant = pantInStock->isNormal() && pantInStock->isNormal();
+            return pantInStock;
+        }
+    }
+    return nullptr;
+}
+

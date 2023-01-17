@@ -26,6 +26,10 @@ public:
     Pant* createPant(Quality quality, int price, int qty, bool normal);
     string getAllQuotes();
     string generateQuoteCode();
+    int currentStock(Clothes* clothes);
+    Shirt* findShirt(Clothes* clothes);
+    Pant* findPant(Clothes* clothes);
+    bool hasStock(Clothes* clothes, int quantity);
 };
 
 

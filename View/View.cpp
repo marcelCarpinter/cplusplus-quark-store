@@ -159,9 +159,6 @@ int View::insertPrice() {
 
 int View::insertQty() {
     int option;
-    this->separatorLine();
-    this->showText("Cotizador Express - Cotizar");
-    this->separatorLine();
     this->showText("Insertar cantidad a cotizar");
     std::cin >> option;
     return option;
