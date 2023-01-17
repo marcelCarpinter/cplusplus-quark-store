@@ -47,8 +47,8 @@ string Presentation::getStoreInfo() {
 }
 
 string Presentation::getSellerInfo() {
-    Seller seller = this->store->getSeller();
-    return seller.getName() + " " + seller.getLastname() + " | " + seller.getCode();
+    Seller* seller = this->store->getSeller();
+    return seller->getName() + " " + seller->getLastname() + " | " + seller->getCode();
 }
 
 Shirt* Presentation::createShirt(Quality quality, int price, int qty, bool neck, bool sleeve) {
@@ -59,20 +59,21 @@ void Presentation::updateShirtSleeve(Shirt* shirt, bool sleeve) {
     shirt->setSleeve(sleeve);
 }
 
-string Presentation::createQuote(string seller_code, Clothes *clothes, int quantity) {
+string Presentation::createQuote(Clothes *clothes, int quantity) {
     // current date/time based on current system
     time_t now = time(0);
     tm *ltm = localtime(&now);
     string date = to_string(ltm->tm_mday) + "/" + to_string((1 + ltm->tm_mon)) + "/" + to_string((1900 + ltm->tm_year));
     string hour = to_string((ltm->tm_hour)) + ":" + to_string((ltm->tm_min));
     auto quote = new Quote(
-            "001",
+            this->generateQuoteCode(),
             date,
             hour,
-            this->store->getSeller().getCode(),
+            this->store->getSeller()->getCode(),
             clothes,
             quantity);
-    this->store->getSeller().addQuote(quote);
+    this->store->getSeller()->addQuote(quote);
+    this->store->getSeller()->getQuotes();
     return quote->toString();
 }
 
@@ -81,7 +82,8 @@ Pant *Presentation::createPant(Quality quality, int price, int qty, bool normal)
 }
 
 string Presentation::getAllQuotes() {
-    std::vector<Quote*> quotes = this->store->getSeller().getQuotes();
+    Seller* seller = this->store->getSeller();
+    std::vector<Quote*> quotes = seller->getQuotes();
     if(quotes.empty()){
         return "No hay Cotizaciones creadas";
     }
@@ -92,6 +94,8 @@ string Presentation::getAllQuotes() {
     return history;
 }
 
-
-
+string Presentation::generateQuoteCode(){
+    int totalQuotes = this->store->getSeller()->getQuotes().size();
+    return "QID_" + to_string(totalQuotes + 1);
+}
 
