@@ -42,3 +42,11 @@ string Shirt::toString() {
     string sleeve = this->isShortSleeve() ? "Manga Corta" : "Manga Larga";
     return "Camisa - " + neck + " - " + sleeve + " - " + this->getQuality();
 }
+
+bool Shirt::isNormalNeck() {
+    return this->normalNeck;
+}
+
+bool Shirt::isShortSleeve() {
+    return this->shortSleeve;
+}
