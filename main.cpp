@@ -1,6 +1,10 @@
 #include <iostream>
+#include <Windows.h>
+#include <cstdio>
+#include "View/View.hpp"
 
 int main() {
-    std::cout << "Hello, World!" << std::endl;
+    SetConsoleOutputCP(CP_UTF8);
+    View main;
     return 0;
 }
