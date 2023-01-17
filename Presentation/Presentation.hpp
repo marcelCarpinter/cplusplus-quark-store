@@ -8,6 +8,8 @@
 
 #include "../Interface/IView.hpp"
 #include "../Model/Store.hpp"
+#include "../Model/Clothes/Pant.hpp"
+#include "../Model/Clothes/Shirt.hpp"
 
 class Presentation {
 private:
@@ -17,6 +19,12 @@ public:
     Presentation(IView* view);
     ~Presentation();
     string getStoreInfo();
+    string getSellerInfo();
+    Shirt* createShirt(Quality quality, int price, int qty, bool neck, bool sleeve);
+    void updateShirtSleeve(Shirt* shirt, bool sleeve);
+    string createQuote(string seller_code, Shirt* shirt, int quantity);
+    //Pant createPant();
+
 };
 
 

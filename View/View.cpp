@@ -61,8 +61,10 @@ void View::chooseClothes() {
         Quality quality = this->insertQuality();
         int price = this->insertPrice();
         int qty = this->insertQty();
-        Shirt *shirt = this->m_presenter->createShirt();
-        this->showText(this->m_presenter->createQuote("Seller", shirt, qty));
+        this->showText(this->m_presenter->createQuote(
+                "Seller",
+                this->m_presenter->createShirt(quality, price, qty, neck, sleeve),
+                qty));
     }
     if(option == "2"){
         bool type = this->choosePantType();
@@ -75,7 +77,7 @@ bool View::chooseShirtSleeve() {
     int option;
     this->showText("Paso 2.a - La camisa a cotizar, ¿Es manga corta?");
     this->showText("1) Sí");
-    this->showText("1) No");
+    this->showText("2) No");
     std::cin >> option;
     return (option == 1);
 }
@@ -84,9 +86,9 @@ bool View::chooseShirtNeck() {
     int option;
     this->showText("Paso 2.b) La camisa a cotizar, ¿Es cuello Mao?");
     this->showText("1) Sí");
-    this->showText("1) No");
+    this->showText("2) No");
     std::cin >> option;
-    return (option == 1);
+    return (option != 1);
 }
 
 bool View::choosePantType() {
