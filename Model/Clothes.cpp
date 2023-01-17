@@ -4,7 +4,7 @@
 
 #include "Clothes.hpp"
 
-Clothes::Clothes(string quality, int p, int qty) {
+Clothes::Clothes(Quality quality, int p, int qty) {
     this->quantity = qty;
     this->price = p;
     this->quality = quality;
@@ -15,7 +15,7 @@ Clothes::~Clothes() {
 }
 
 string Clothes::getQuality() {
-    return this->quality;
+    return (this->quality == Quality::Standard) ? "Standard" : "Premium";
 }
 
 int Clothes::getQuantity() {

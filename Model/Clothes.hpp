@@ -7,15 +7,16 @@
 
 using namespace std;
 #include <string>
+#include "../Enum/Quality.hpp"
 
 class Clothes {
 private:
-    string quality;
+    Quality quality;
     int quantity;
 public:
     int price;
     Clothes();
-    Clothes(string, int, int);
+    Clothes(Quality quality, int p, int qty);
     ~Clothes();
     string getQuality();
     virtual int getPrice() = 0;
