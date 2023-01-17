@@ -26,3 +26,8 @@ int Pant::getPrice() {
     }
     return this->price;
 }
+
+string Pant::toString() {
+    string normal = this->isNormal() ? "Común" : "Chupín";
+    return "Pantalón - " + normal + " - " + this->getQuality();
+}

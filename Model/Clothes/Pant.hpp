@@ -16,6 +16,7 @@ public:
     ~Pant();
     bool isNormal();
     int getPrice() override;
+    string toString() override;
 };
 
 
