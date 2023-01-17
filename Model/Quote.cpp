@@ -20,3 +20,14 @@ Quote::~Quote() {
 int Quote::getTotal() {
     return 0;
 }
+
+string Quote::toString() {
+    return
+            "Numero de identificacion: " + this->id + "\n" +
+            "Fecha y Hora: " + this->createdDate + " " + this->createdTime + "\n" +
+            "Codigo del Vendedor: " + this->sellerCode + "\n" +
+            "Prenda cotizada: " + "Info de la Prenda cotizada" + "\n" +
+            "Precio Unitario: " + "Precio unitario de la Prenda cotizada" + "\n" +
+            "Cantidad de unidades cotizadas: " + to_string(this->quantity) + "\n" +
+            "Precio Final: " + to_string(this->getTotal()) + "\n";
+}
