@@ -13,6 +13,7 @@ class IView {
 public:
     virtual ~IView() = default;
     virtual void showText(const string& text) = 0;
+    virtual void cleanConsole() = 0;
 };
 
 

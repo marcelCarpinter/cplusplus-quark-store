@@ -8,7 +8,6 @@
 #include "../Interface/IView.hpp"
 #include "../Presentation/Presentation.hpp"
 #include "../Enum/Quality.hpp"
-// #include "../Presentation/Presentation.hpp"
 
 using namespace std;
 #include <string>
@@ -28,11 +27,16 @@ private:
     int insertPrice();
     int insertQty();
     Quality insertQuality();
-    void readOption(const char* option, bool& exitCondition);
+    void separatorLine();
+    void displayAllQuotes();
+    void displayYesNoMenu();
+    void backToMainMenuText();
+    void backToMainMenu();
 public:
     View();
     ~View() override;
     void showText(const std::string& text) override;
+    void cleanConsole() override;
 };
 
 
