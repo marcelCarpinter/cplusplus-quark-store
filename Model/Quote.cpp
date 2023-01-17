@@ -4,7 +4,7 @@
 
 #include "Quote.hpp"
 
-Quote::Quote(string id, string createdDate, string createdTime, string sellerCode, string itemId, int quantity) {
+Quote::Quote(string id, string createdDate, string createdTime, string sellerCode, Clothes* itemId, int quantity) {
     this->id = id;
     this->createdDate = createdDate;
     this->createdTime = createdTime;

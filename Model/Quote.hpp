@@ -7,6 +7,7 @@
 
 using namespace std;
 #include <string>
+#include "Clothes.hpp"
 
 class Quote {
 private:
@@ -14,10 +15,10 @@ private:
     string createdDate;
     string createdTime;
     string sellerCode;
-    string itemId;
+    Clothes* itemId;
     int quantity;
 public:
-    Quote(string id, string createdDate, string createdTime, string sellerCode, string itemId, int quantity);
+    Quote(string id, string createdDate, string createdTime, string sellerCode, Clothes* itemId, int quantity);
     ~Quote();
     int getTotal();
 };
