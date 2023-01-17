@@ -7,6 +7,7 @@
 
 #include "../Interface/IView.hpp"
 #include "../Presentation/Presentation.hpp"
+#include "../Enum/Quality.hpp"
 // #include "../Presentation/Presentation.hpp"
 
 using namespace std;
@@ -18,8 +19,16 @@ private:
     Presentation* m_presenter;
     void showStoreInfo();
     void showSellerInfo();
-    //void showMainMenu();
-    //void readOption(const char* option, bool& exitCondition);
+    void showMainMenu();
+    void newQuote();
+    void chooseClothes();
+    bool chooseShirtSleeve();
+    bool chooseShirtNeck();
+    bool choosePantType();
+    int insertPrice();
+    int insertQty();
+    Quality insertQuality();
+    void readOption(const char* option, bool& exitCondition);
 public:
     View();
     ~View() override;
