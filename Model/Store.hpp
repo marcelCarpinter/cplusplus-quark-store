@@ -20,7 +20,7 @@ public:
     ~Store();
     string getName();
     string getAddress();
-    Seller getSeller();
+    Seller* getSeller();
     void addClothes(Clothes* clothes);
     std::vector<Clothes*> getClothesList();
 };

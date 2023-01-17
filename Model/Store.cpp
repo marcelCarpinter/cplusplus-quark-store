@@ -22,8 +22,8 @@ string Store::getAddress() {
     return this->address;
 }
 
-Seller Store::getSeller() {
-    return *this->seller;
+Seller* Store::getSeller() {
+    return this->seller;
 }
 
 void Store::addClothes(Clothes *clothes) {
