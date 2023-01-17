@@ -22,6 +22,7 @@ public:
     int getPrice() override;
     void setSleeve(const bool &sleeve);
     void setNeck(const bool &neck);
+    string toString() override;
 };
 
 

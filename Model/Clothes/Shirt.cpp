@@ -36,3 +36,9 @@ void Shirt::setSleeve(const bool &sleeve) {
 void Shirt::setNeck(const bool &neck) {
     Shirt::normalNeck = neck;
 }
+
+string Shirt::toString() {
+    string neck = this->isNormalNeck() ? "Cuello común" : "Cuello Mao";
+    string sleeve = this->isShortSleeve() ? "Manga Corta" : "Manga Larga";
+    return "Camisa - " + neck + " - " + sleeve + " - " + this->getQuality();
+}
