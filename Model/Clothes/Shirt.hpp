@@ -16,7 +16,7 @@ private:
     bool shortSleeve();
     bool normalNeck();
 public:
-    Shirt(string, int, int, string, string);
+    Shirt(string quality, int price, int qty, string neck, string sleeve);
     ~Shirt();
     string getNeck();
     string getSleeve();
