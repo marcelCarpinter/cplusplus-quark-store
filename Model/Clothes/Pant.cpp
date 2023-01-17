@@ -4,7 +4,7 @@
 
 #include "Pant.hpp"
 
-Pant::Pant(string quality, int price, int qty, bool normal) : Clothes(quality, price, qty) {
+Pant::Pant(Quality quality, int price, int qty, bool normal) : Clothes(quality, price, qty) {
     this->normal = normal;
 }
 
