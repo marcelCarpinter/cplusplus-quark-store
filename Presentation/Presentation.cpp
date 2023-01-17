@@ -34,14 +34,18 @@ void Presentation::updateShirtSleeve(Shirt* shirt, bool sleeve) {
     shirt->setSleeve(sleeve);
 }
 
-string Presentation::createQuote(string seller_code, Shirt *shirt, int quantity) {
+string Presentation::createQuote(string seller_code, Clothes *clothes, int quantity) {
     // current date/time based on current system
     time_t now = time(0);
     tm *ltm = localtime(&now);
     string date = to_string(ltm->tm_mday) + "/" + to_string((1 + ltm->tm_mon)) + "/" + to_string((1900 + ltm->tm_year));
     string hour = to_string((ltm->tm_hour)) + ":" + to_string((ltm->tm_min));
-    auto quote = new Quote("001", date, hour, seller_code, shirt, quantity);
+    auto quote = new Quote("001", date, hour, seller_code, clothes, quantity);
     return quote->toString();
+}
+
+Pant *Presentation::createPant(Quality quality, int price, int qty, bool normal) {
+    return new Pant(quality, price, qty, normal);
 }
 
 

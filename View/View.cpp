@@ -18,7 +18,6 @@ View::View() {
     this->showSellerInfo();
     this->showText("-----------------------------");
     this->showMainMenu();
-    this->newQuote();
 }
 
 View::~View() {
@@ -42,6 +41,22 @@ void View::showMainMenu() {
     this->showText("1- Historial de Cotizaciones");
     this->showText("2- Realizar Cotización");
     this->showText("3- Salir");
+    int option;
+    cin >> option;
+    cin.get();
+    switch (option) {
+        case 1:
+            this->showText("Mostrando historial");
+            break;
+        case 2:
+            this->newQuote();
+            break;
+        case 3:
+            this->showText("Cerrando sistema");
+            break;
+        default:
+            this->showText("Error en la opción a elegir");
+    }
 }
 
 void View::newQuote() {
@@ -68,8 +83,15 @@ void View::chooseClothes() {
     }
     if(option == "2"){
         bool type = this->choosePantType();
-        Pant* p = new Pant(Quality::Standard, 5, 5, type);
+        Quality quality = this->insertQuality();
+        int price = this->insertPrice();
+        int qty = this->insertQty();
+        Pant* p = new Pant(quality, price, qty, type);
         this->showText(p->getQuality());
+        this->showText(this->m_presenter->createQuote(
+                "Seller",
+                this->m_presenter->createPant(quality, price, qty, type),
+                qty));
     }
 }
 
@@ -94,6 +116,8 @@ bool View::chooseShirtNeck() {
 bool View::choosePantType() {
     string option;
     this->showText("¿Es chupin?");
+    this->showText("1) Sí");
+    this->showText("2) No");
     std::cin >> option;
     return (option == "1");
 }

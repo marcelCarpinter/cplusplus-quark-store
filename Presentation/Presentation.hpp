@@ -22,9 +22,8 @@ public:
     string getSellerInfo();
     Shirt* createShirt(Quality quality, int price, int qty, bool neck, bool sleeve);
     void updateShirtSleeve(Shirt* shirt, bool sleeve);
-    string createQuote(string seller_code, Shirt* shirt, int quantity);
-    //Pant createPant();
-
+    string createQuote(string seller_code, Clothes* clothes, int quantity);
+    Pant* createPant(Quality quality, int price, int qty, bool normal);
 };
 
 
