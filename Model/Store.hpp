@@ -14,12 +14,15 @@ private:
     string name;
     string address;
     Seller* seller;
+    std::vector<Clothes*> items;
 public:
     Store(string name, string address, Seller* seller);
     ~Store();
     string getName();
     string getAddress();
     Seller getSeller();
+    void addClothes(Clothes* clothes);
+    std::vector<Clothes*> getClothesList();
 };
 
 

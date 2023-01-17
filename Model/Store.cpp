@@ -25,3 +25,11 @@ string Store::getAddress() {
 Seller Store::getSeller() {
     return *this->seller;
 }
+
+void Store::addClothes(Clothes *clothes) {
+    this->items.push_back(clothes);
+}
+
+std::vector<Clothes *> Store::getClothesList() {
+    return this->items;
+}
