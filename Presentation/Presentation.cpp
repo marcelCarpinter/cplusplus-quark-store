@@ -40,7 +40,13 @@ string Presentation::createQuote(string seller_code, Clothes *clothes, int quant
     tm *ltm = localtime(&now);
     string date = to_string(ltm->tm_mday) + "/" + to_string((1 + ltm->tm_mon)) + "/" + to_string((1900 + ltm->tm_year));
     string hour = to_string((ltm->tm_hour)) + ":" + to_string((ltm->tm_min));
-    auto quote = new Quote("001", date, hour, seller_code, clothes, quantity);
+    auto quote = new Quote(
+            "001",
+            date,
+            hour,
+            this->store->getSeller().getCode(),
+            clothes,
+            quantity);
     return quote->toString();
 }
 
