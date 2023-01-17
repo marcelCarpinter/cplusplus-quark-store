@@ -61,12 +61,12 @@ void View::chooseClothes() {
         Quality quality = this->insertQuality();
         int price = this->insertPrice();
         int qty = this->insertQty();
-        //Shirt shirt = this->m_presenter->createShirt();
-        this->showText(c->getNeck());
+        Shirt *shirt = this->m_presenter->createShirt();
+        this->showText(this->m_presenter->createQuote("Seller", shirt, qty));
     }
     if(option == "2"){
         bool type = this->choosePantType();
-        Pant* p = new Pant("Standard", 5, 5, type);
+        Pant* p = new Pant(Quality::Standard, 5, 5, type);
         this->showText(p->getQuality());
     }
 }
@@ -116,5 +116,5 @@ Quality View::insertQuality(){
     this->showText("1) Standard");
     this->showText("2) Premium");
     std::cin >> option;
-    return (option == 1) ? Quality::Premium : Quality::Standard;
+    return (option == 1) ? Quality::Standard : Quality::Premium;
 }
