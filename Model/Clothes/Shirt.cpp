@@ -4,7 +4,7 @@
 
 #include "Shirt.hpp"
 
-Shirt::Shirt(string quality, int price, int qty, bool neck, bool sleeve) : Clothes(quality, price, qty) {
+Shirt::Shirt(Quality quality, int price, int qty, bool neck, bool sleeve) : Clothes(quality, price, qty) {
     this->normalNeck = neck;
     this->shortSleeve = sleeve;
 }

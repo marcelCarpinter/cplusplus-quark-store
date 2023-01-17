@@ -11,10 +11,10 @@ using namespace std;
 
 class Shirt: public Clothes {
 private:
-    bool shortSleeve;
-    bool normalNeck;
+    bool shortSleeve{};
+    bool normalNeck{};
 public:
-    Shirt(string quality, int price, int qty, bool neck, bool sleeve);
+    Shirt(Quality quality, int price, int qty, bool neck, bool sleeve);
     Shirt();
     ~Shirt();
     bool isNormalNeck();
