@@ -31,10 +31,10 @@ Shirt::Shirt() {
 
 }
 
-void Shirt::setSleeve(const string &sleeve) {
-    Shirt::sleeve = sleeve;
+void Shirt::setSleeve(const bool &sleeve) {
+    Shirt::shortSleeve = sleeve;
 }
 
-void Shirt::setNeck(const string &neck) {
-    Shirt::neck = neck;
+void Shirt::setNeck(const bool &neck) {
+    Shirt::normalNeck = neck;
 }

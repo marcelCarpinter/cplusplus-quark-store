@@ -20,8 +20,8 @@ public:
     bool isNormalNeck();
     bool isShortSleeve();
     int getPrice() override;
-    void setSleeve(const string &sleeve);
-    void setNeck(const string &neck);
+    void setSleeve(const bool &sleeve);
+    void setNeck(const bool &neck);
 };
 
 
