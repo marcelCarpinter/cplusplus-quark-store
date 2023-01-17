@@ -22,12 +22,13 @@ int Quote::getTotal() {
 }
 
 string Quote::toString() {
+    int price = this->itemId->getPrice();
     return
             "Numero de identificacion: " + this->id + "\n" +
             "Fecha y Hora: " + this->createdDate + " " + this->createdTime + "\n" +
             "Codigo del Vendedor: " + this->sellerCode + "\n" +
-            "Prenda cotizada: " + "Info de la Prenda cotizada" + "\n" +
-            "Precio Unitario: " + "Precio unitario de la Prenda cotizada" + "\n" +
+            "Prenda cotizada: " + this->itemId->toString() + "\n" +
+            "Precio Unitario: " + to_string(price) + "\n" +
             "Cantidad de unidades cotizadas: " + to_string(this->quantity) + "\n" +
-            "Precio Final: " + to_string(this->getTotal()) + "\n";
+            "Precio Final: " + to_string(price * this->quantity) + "\n";
 }
