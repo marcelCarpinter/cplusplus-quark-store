@@ -72,11 +72,24 @@ string Presentation::createQuote(string seller_code, Clothes *clothes, int quant
             this->store->getSeller().getCode(),
             clothes,
             quantity);
+    this->store->getSeller().addQuote(quote);
     return quote->toString();
 }
 
 Pant *Presentation::createPant(Quality quality, int price, int qty, bool normal) {
     return new Pant(quality, price, qty, normal);
+}
+
+string Presentation::getAllQuotes() {
+    std::vector<Quote*> quotes = this->store->getSeller().getQuotes();
+    if(quotes.empty()){
+        return "No hay Cotizaciones creadas";
+    }
+    string history;
+    for( Quote* quote : quotes ){
+        history += quote->toString() + "\n";
+    }
+    return history;
 }
 
 

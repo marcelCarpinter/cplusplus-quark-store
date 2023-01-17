@@ -24,6 +24,7 @@ public:
     void updateShirtSleeve(Shirt* shirt, bool sleeve);
     string createQuote(string seller_code, Clothes* clothes, int quantity);
     Pant* createPant(Quality quality, int price, int qty, bool normal);
+    string getAllQuotes();
 };
 
 
