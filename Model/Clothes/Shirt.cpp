@@ -4,28 +4,20 @@
 
 #include "Shirt.hpp"
 
-Shirt::Shirt(string quality, int price, int qty, string neck, string sleeve) : Clothes(quality, price, qty) {
-    this->neck = neck;
-    this->sleeve = sleeve;
+Shirt::Shirt(string quality, int price, int qty, bool neck, bool sleeve) : Clothes(quality, price, qty) {
+    this->normalNeck = neck;
+    this->shortSleeve = sleeve;
 }
 
 Shirt::~Shirt() {
 
 }
 
-string Shirt::getNeck() {
-    return this->neck;
-}
-
-string Shirt::getSleeve() {
-    return this->sleeve;
-}
-
 int Shirt::getPrice() {
-    if( this->shortSleeve() ){
+    if( this->shortSleeve ){
         this->price = this->price - (this->price * 0.1);
     }
-    if ( !this->normalNeck() ){
+    if ( !this->normalNeck ){
         this->price = this->price + (this->price * 0.03);
     }
     string quality = this->getQuality();
@@ -35,10 +27,14 @@ int Shirt::getPrice() {
     return this->price;
 }
 
-bool Shirt::normalNeck() {
-    return false;
+Shirt::Shirt() {
+
 }
 
-bool Shirt::shortSleeve() {
-    return false;
+void Shirt::setSleeve(const string &sleeve) {
+    Shirt::sleeve = sleeve;
+}
+
+void Shirt::setNeck(const string &neck) {
+    Shirt::neck = neck;
 }

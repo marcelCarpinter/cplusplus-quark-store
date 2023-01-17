@@ -11,16 +11,17 @@ using namespace std;
 
 class Shirt: public Clothes {
 private:
-    string sleeve;
-    string neck;
-    bool shortSleeve();
-    bool normalNeck();
+    bool shortSleeve;
+    bool normalNeck;
 public:
-    Shirt(string quality, int price, int qty, string neck, string sleeve);
+    Shirt(string quality, int price, int qty, bool neck, bool sleeve);
+    Shirt();
     ~Shirt();
-    string getNeck();
-    string getSleeve();
+    bool isNormalNeck();
+    bool isShortSleeve();
     int getPrice() override;
+    void setSleeve(const string &sleeve);
+    void setNeck(const string &neck);
 };
 
 
