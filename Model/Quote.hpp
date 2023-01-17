@@ -21,6 +21,7 @@ public:
     Quote(string id, string createdDate, string createdTime, string sellerCode, Clothes* itemId, int quantity);
     ~Quote();
     int getTotal();
+    string toString();
 };
 
 

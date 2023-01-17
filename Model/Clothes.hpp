@@ -20,6 +20,7 @@ public:
     ~Clothes();
     string getQuality();
     virtual int getPrice() = 0;
+    virtual string toString() = 0;
     int getQuantity();
 };
 
