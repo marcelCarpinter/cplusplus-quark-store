@@ -32,23 +32,22 @@ void View::showSellerInfo(){
 }
 
 void View::showMainMenu() {
+    this->separatorLine();
+    this->showText("Cotizador Express - Menú Principal");
+    this->separatorLine();
+    this->showStoreInfo();
+    this->separatorLine();
+    this->showSellerInfo();
+    this->separatorLine();
+    this->showText("Seleccione una opción del menú");
+    this->showText("1- Historial de Cotizaciones");
+    this->showText("2- Realizar Cotización");
+    this->showText("3- Salir");
     bool isValidOption = true;
     do{
-        this->separatorLine();
-        this->showText("Cotizador Express - Menú Principal");
-        this->separatorLine();
-        this->showStoreInfo();
-        this->separatorLine();
-        this->showSellerInfo();
-        this->separatorLine();
-        this->showText("Seleccione una opción del menú");
-        this->showText("1- Historial de Cotizaciones");
-        this->showText("2- Realizar Cotización");
-        this->showText("3- Salir");
         int option;
         cin >> option;
         cin.get();
-        isValidOption = option > 0 && option < 3;
         switch (option) {
             case 1:
                 this->displayAllQuotes();
@@ -64,6 +63,9 @@ void View::showMainMenu() {
                 break;
             default:
                 this->showText("Error en la opción a elegir");
+                isValidOption = true;
+                exit(EXIT_SUCCESS);
+                break;
         }
     } while (!isValidOption);
 }
@@ -95,8 +97,7 @@ void View::chooseClothes() {
         this->showText("Cotizador Express - Cotizar");
         this->backToMainMenuText();
         this->showText(this->m_presenter->createQuote(
-                this->m_presenter->createShirt(quality, price, qty, neck, sleeve),
-                qty));
+                this->m_presenter->createShirt(quality, price, qty, neck, sleeve)));
     }
     if(option == "2"){
         bool type = this->choosePantType();
@@ -111,8 +112,7 @@ void View::chooseClothes() {
         this->showText("Cotizador Express - Cotizar");
         this->backToMainMenuText();
         this->showText(this->m_presenter->createQuote(
-                this->m_presenter->createPant(quality, price, qty, type),
-                qty));
+                this->m_presenter->createPant(quality, price, qty, type)));
     }
     this->backToMainMenu();
 }
