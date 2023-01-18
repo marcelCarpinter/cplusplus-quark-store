@@ -27,8 +27,6 @@ int Shirt::getPrice() {
     return this->price;
 }
 
-Shirt::Shirt() = default;
-
 void Shirt::setSleeve(const bool &sleeve) {
     Shirt::shortSleeve = sleeve;
 }

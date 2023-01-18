@@ -15,7 +15,6 @@ private:
     bool normalNeck{};
 public:
     Shirt(Quality quality, int price, int qty, bool neck, bool sleeve);
-    Shirt();
     ~Shirt();
     bool isNormalNeck();
     bool isShortSleeve();
