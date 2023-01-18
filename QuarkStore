@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-01-18T00:46:59.329Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36" etag="EuwkiLCsbj2C7lBXzzVO" version="20.8.4" type="github">
+<mxfile host="app.diagrams.net" modified="2023-01-18T00:48:54.398Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36" etag="1c9pxFTBLkg1_6MzxO2W" version="20.8.4" type="github">
   <diagram id="R2lEEEUBdFMjLlhIrx00" name="Page-1">
     <mxGraphModel dx="1776" dy="480" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0" extFonts="Permanent Marker^https://fonts.googleapis.com/css?family=Permanent+Marker">
       <root>
@@ -120,7 +120,7 @@
         </mxCell>
         <mxCell id="IeiW8UJL4zhcdgA0wQR6-32" value="Seller" style="" parent="0" />
         <mxCell id="IeiW8UJL4zhcdgA0wQR6-39" value="Seller" style="swimlane;fontStyle=2;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;" parent="IeiW8UJL4zhcdgA0wQR6-32" vertex="1">
-          <mxGeometry x="240" y="400" width="160" height="220" as="geometry">
+          <mxGeometry x="240" y="400" width="160" height="310" as="geometry">
             <mxRectangle x="230" y="140" width="160" height="26" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
@@ -144,6 +144,18 @@
         </mxCell>
         <mxCell id="IeiW8UJL4zhcdgA0wQR6-69" value="+ getCode():  string" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=0;shadow=0;html=0;" parent="IeiW8UJL4zhcdgA0wQR6-39" vertex="1">
           <mxGeometry y="164" width="160" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="CPDB9Civfv9w_Uxn-Qf9-64" value="+ Seller(string, string, string)" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=0;shadow=0;html=0;" vertex="1" parent="IeiW8UJL4zhcdgA0wQR6-39">
+          <mxGeometry y="190" width="160" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="CPDB9Civfv9w_Uxn-Qf9-65" value="+ ~Seller()" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=0;shadow=0;html=0;" vertex="1" parent="IeiW8UJL4zhcdgA0wQR6-39">
+          <mxGeometry y="216" width="160" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="CPDB9Civfv9w_Uxn-Qf9-66" value="+ getQuotes(): Quote[]" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=0;shadow=0;html=0;" vertex="1" parent="IeiW8UJL4zhcdgA0wQR6-39">
+          <mxGeometry y="242" width="160" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="CPDB9Civfv9w_Uxn-Qf9-67" value="+ addQuote(Quote)" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=0;shadow=0;html=0;" vertex="1" parent="IeiW8UJL4zhcdgA0wQR6-39">
+          <mxGeometry y="268" width="160" height="26" as="geometry" />
         </mxCell>
         <mxCell id="CPDB9Civfv9w_Uxn-Qf9-24" value="1" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="IeiW8UJL4zhcdgA0wQR6-32">
           <mxGeometry x="330" y="370" width="30" height="30" as="geometry" />
