@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-01-18T02:26:24.561Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36" etag="pST2WF1z4kIyHMnx3A4t" version="20.8.4" type="github">
+<mxfile host="app.diagrams.net" modified="2023-01-18T02:26:40.231Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36" etag="Z97WFdwWcKQDkujs_8XE" version="20.8.4" type="github">
   <diagram id="R2lEEEUBdFMjLlhIrx00" name="Page-1">
     <mxGraphModel dx="1776" dy="480" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0" extFonts="Permanent Marker^https://fonts.googleapis.com/css?family=Permanent+Marker">
       <root>
@@ -269,10 +269,10 @@
           <mxGeometry x="855" y="185" width="30" height="30" as="geometry" />
         </mxCell>
         <mxCell id="CPDB9Civfv9w_Uxn-Qf9-81" value="sells &amp;gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="IeiW8UJL4zhcdgA0wQR6-92">
-          <mxGeometry x="900" y="185" width="60" height="30" as="geometry" />
+          <mxGeometry x="885" y="185" width="60" height="30" as="geometry" />
         </mxCell>
         <mxCell id="CPDB9Civfv9w_Uxn-Qf9-82" value="&amp;lt; stored" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="IeiW8UJL4zhcdgA0wQR6-92">
-          <mxGeometry x="890" y="150" width="70" height="30" as="geometry" />
+          <mxGeometry x="900" y="155" width="70" height="30" as="geometry" />
         </mxCell>
         <mxCell id="CPDB9Civfv9w_Uxn-Qf9-12" value="Shirt" style="locked=1;" parent="0" />
         <mxCell id="CPDB9Civfv9w_Uxn-Qf9-20" value="Shirt" style="swimlane;fontStyle=2;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;" vertex="1" parent="CPDB9Civfv9w_Uxn-Qf9-12">
