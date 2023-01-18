@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2023-01-18T00:53:14.932Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36" etag="hu8-PxykKPLik_gxQ2t9" version="20.8.4" type="github">
+<mxfile host="app.diagrams.net" modified="2023-01-18T00:59:23.366Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36" etag="IgaHR02qR3eq27OtyxOs" version="20.8.4" type="github">
   <diagram id="R2lEEEUBdFMjLlhIrx00" name="Page-1">
-    <mxGraphModel dx="1950" dy="570" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0" extFonts="Permanent Marker^https://fonts.googleapis.com/css?family=Permanent+Marker">
+    <mxGraphModel dx="1615" dy="397" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0" extFonts="Permanent Marker^https://fonts.googleapis.com/css?family=Permanent+Marker">
       <root>
         <mxCell id="0" />
         <mxCell id="1" style="locked=1;" parent="0" />
@@ -334,14 +334,23 @@
         <mxCell id="CPDB9Civfv9w_Uxn-Qf9-44" value="*" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="CPDB9Civfv9w_Uxn-Qf9-12">
           <mxGeometry x="980" y="160" width="30" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="CPDB9Civfv9w_Uxn-Qf9-69" value="RNE" style="locked=1;" parent="0" />
+        <mxCell id="CPDB9Civfv9w_Uxn-Qf9-69" value="RNE" style="" parent="0" />
         <mxCell id="CPDB9Civfv9w_Uxn-Qf9-70" value="RNE" style="swimlane;fontStyle=2;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;" vertex="1" parent="CPDB9Civfv9w_Uxn-Qf9-69">
           <mxGeometry x="425" y="830" width="255" height="420" as="geometry">
             <mxRectangle x="230" y="140" width="160" height="26" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="CPDB9Civfv9w_Uxn-Qf9-71" value="- Standard" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="CPDB9Civfv9w_Uxn-Qf9-70">
-          <mxGeometry y="26" width="255" height="26" as="geometry" />
+        <mxCell id="CPDB9Civfv9w_Uxn-Qf9-71" value="En la clase Shirt, getPrice() es un calculado&#xa;- Si es manga corta, se rebaja en 10%&#xa;- Si tiene cuello mao, el precio aumenta en 3%&#xa;- Si se dan ambas condiciones, se tienen que &#xa;aplicar en orden&#xa;" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="CPDB9Civfv9w_Uxn-Qf9-70">
+          <mxGeometry y="26" width="255" height="84" as="geometry" />
+        </mxCell>
+        <mxCell id="CPDB9Civfv9w_Uxn-Qf9-73" value="En la clase Pant, getPrice() es un calculado&#xa;- Si es chupín, se rebaja en un 12%&#xa;" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="CPDB9Civfv9w_Uxn-Qf9-70">
+          <mxGeometry y="110" width="255" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="CPDB9Civfv9w_Uxn-Qf9-74" value="getPrice() también calcula basado en Quality:&#xa;- Si es Standard, el precio no se modifica&#xa;- Si es Premium, el precio aumenta 30%&#xa;" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="CPDB9Civfv9w_Uxn-Qf9-70">
+          <mxGeometry y="160" width="255" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="CPDB9Civfv9w_Uxn-Qf9-75" value="&lt;span style=&quot;color: rgb(0, 0, 0); font-family: Helvetica; font-size: 12px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(251, 251, 251); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;&quot;&gt;- El stock a cotizar debe ser menor o igual al stock actual de la tienda&lt;/span&gt;" style="text;whiteSpace=wrap;html=1;" vertex="1" parent="CPDB9Civfv9w_Uxn-Qf9-70">
+          <mxGeometry y="220" width="255" height="40" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
