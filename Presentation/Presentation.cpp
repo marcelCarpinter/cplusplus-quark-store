@@ -38,7 +38,6 @@ Presentation::Presentation(IView* view)
 }
 
 Presentation::~Presentation() {
-    delete this->view;
     delete this->store;
 }
 
@@ -59,8 +58,8 @@ void Presentation::updateShirtSleeve(Shirt* shirt, bool sleeve) {
     shirt->setSleeve(sleeve);
 }
 
-string Presentation::createQuote(Clothes *clothes, int quantity) {
-    if(!this->hasStock(clothes, quantity)){
+string Presentation::createQuote(Clothes *clothes) {
+    if(!this->hasStock(clothes)){
         return "No hay suficiente ropa en stock";
     }
     // current date/time based on current system
@@ -74,7 +73,7 @@ string Presentation::createQuote(Clothes *clothes, int quantity) {
             hour,
             this->store->getSeller()->getCode(),
             clothes,
-            quantity);
+            clothes->getQuantity());
     this->store->getSeller()->addQuote(quote);
     this->store->getSeller()->getQuotes();
     return quote->toString();
@@ -102,14 +101,18 @@ string Presentation::generateQuoteCode(){
     return "QID_" + to_string(totalQuotes + 1);
 }
 
-bool Presentation::hasStock(Clothes *clothes, int quantity) {
-    Shirt* requestedItem = dynamic_cast<Shirt*>(clothes);
-    if(requestedItem != nullptr){
+bool Presentation::hasStock(Clothes *clothes) {
+    Shirt* requestedShirt = dynamic_cast<Shirt*>(clothes);
+    if(requestedShirt != nullptr){
         Shirt* s = this->findShirt(clothes);
-        return s->getQuantity() >= quantity;
+        return s->getQuantity() >= requestedShirt->getQuantity();
     }
-    Pant* p = this->findPant(clothes);
-    return p->getQuantity() >= quantity;
+    Pant* requestedPant = dynamic_cast<Pant*>(clothes);
+    if(requestedPant != nullptr){
+        Pant* p = this->findPant(clothes);
+        return p->getQuantity() >= requestedPant->getQuantity();
+    }
+    return false;
 }
 
 int Presentation::currentStock(Clothes *clothes) {
