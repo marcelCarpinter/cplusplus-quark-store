@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-01-18T02:26:40.231Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36" etag="Z97WFdwWcKQDkujs_8XE" version="20.8.4" type="github">
+<mxfile host="app.diagrams.net" modified="2023-01-18T03:12:55.819Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36" etag="Qz3b8Jn2XiXiYP6fzgPE" version="20.8.4" type="github">
   <diagram id="R2lEEEUBdFMjLlhIrx00" name="Page-1">
     <mxGraphModel dx="1776" dy="480" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0" extFonts="Permanent Marker^https://fonts.googleapis.com/css?family=Permanent+Marker">
       <root>
@@ -241,7 +241,7 @@
         <mxCell id="IeiW8UJL4zhcdgA0wQR6-100" value="- quantity: int" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=0;shadow=0;html=0;" parent="IeiW8UJL4zhcdgA0wQR6-94" vertex="1">
           <mxGeometry y="78" width="160" height="26" as="geometry" />
         </mxCell>
-        <mxCell id="CPDB9Civfv9w_Uxn-Qf9-38" value="+ finalPrice: int" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=0;shadow=0;html=0;" vertex="1" parent="IeiW8UJL4zhcdgA0wQR6-94">
+        <mxCell id="CPDB9Civfv9w_Uxn-Qf9-38" value="+ finalPrice: double" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=0;shadow=0;html=0;" vertex="1" parent="IeiW8UJL4zhcdgA0wQR6-94">
           <mxGeometry y="104" width="160" height="26" as="geometry" />
         </mxCell>
         <mxCell id="CPDB9Civfv9w_Uxn-Qf9-37" value="" style="line;html=1;strokeWidth=1;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" vertex="1" parent="IeiW8UJL4zhcdgA0wQR6-94">
@@ -256,7 +256,7 @@
         <mxCell id="CPDB9Civfv9w_Uxn-Qf9-40" value="+ getQuality(): string" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=0;shadow=0;html=0;" vertex="1" parent="IeiW8UJL4zhcdgA0wQR6-94">
           <mxGeometry y="190" width="160" height="26" as="geometry" />
         </mxCell>
-        <mxCell id="CPDB9Civfv9w_Uxn-Qf9-41" value="+ virtual getPrice(): int" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=0;shadow=0;html=0;" vertex="1" parent="IeiW8UJL4zhcdgA0wQR6-94">
+        <mxCell id="CPDB9Civfv9w_Uxn-Qf9-41" value="+ virtual getPrice(): double" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=0;shadow=0;html=0;" vertex="1" parent="IeiW8UJL4zhcdgA0wQR6-94">
           <mxGeometry y="216" width="160" height="26" as="geometry" />
         </mxCell>
         <mxCell id="CPDB9Civfv9w_Uxn-Qf9-42" value="+ virtual toString(): string " style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=0;shadow=0;html=0;" vertex="1" parent="IeiW8UJL4zhcdgA0wQR6-94">
