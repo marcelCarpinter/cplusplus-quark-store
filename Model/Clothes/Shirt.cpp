@@ -14,17 +14,20 @@ Shirt::~Shirt() {
 }
 
 int Shirt::getPrice() {
+    if (this->finalPrice != 0){
+        return this->finalPrice;
+    }
     if( this->shortSleeve ){
-        this->price = this->price - (this->price * 0.1);
+        this->finalPrice = this->price - (this->price * 0.1);
     }
     if ( !this->normalNeck ){
-        this->price = this->price + (this->price * 0.03);
+        this->finalPrice = this->price + (this->price * 0.03);
     }
     string quality = this->getQuality();
-    if(quality == "premium"){
-        this->price = this->price + (this->price * 0.3);
+    if(quality == "Premium"){
+        this->finalPrice = this->price + (this->price * 0.3);
     }
-    return this->price;
+    return this->finalPrice;
 }
 
 void Shirt::setSleeve(const bool &sleeve) {
@@ -48,3 +51,4 @@ bool Shirt::isNormalNeck() {
 bool Shirt::isShortSleeve() {
     return this->shortSleeve;
 }
+

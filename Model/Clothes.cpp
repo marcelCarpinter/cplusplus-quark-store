@@ -7,6 +7,7 @@
 Clothes::Clothes(Quality quality, int p, int qty) {
     this->quantity = qty;
     this->price = p;
+    this->finalPrice = 0;
     this->quality = quality;
 }
 

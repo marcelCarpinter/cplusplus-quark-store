@@ -107,7 +107,6 @@ void View::chooseClothes() {
         this->displayStock(dummyPant);
         int qty = this->insertQty();
         Pant* p = new Pant(quality, price, qty, type);
-        this->showText(p->getQuality());
         this->separatorLine();
         this->showText("Cotizador Express - Cotizar");
         this->backToMainMenuText();
