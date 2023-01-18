@@ -22,7 +22,7 @@ int Quote::getTotal() {
 }
 
 string Quote::toString() {
-    int price = this->itemId->getPrice();
+    double price = this->itemId->getPrice();
     return
             "Numero de identificacion: " + this->id + "\n" +
             "Fecha y Hora: " + this->createdDate + " " + this->createdTime + "\n" +

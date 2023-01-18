@@ -121,8 +121,12 @@ int Presentation::currentStock(Clothes *clothes) {
         Shirt* s = this->findShirt(clothes);
         return s->getQuantity();
     }
-    Pant* p = this->findPant(clothes);
-    return p->getQuantity();
+    Pant* requestedPant = dynamic_cast<Pant*>(clothes);
+    if(requestedPant != nullptr) {
+        Pant *p = this->findPant(clothes);
+        return p->getQuantity();
+    }
+    return 0;
 }
 
 Shirt *Presentation::findShirt(Clothes *clothes) {
@@ -151,7 +155,7 @@ Pant *Presentation::findPant(Clothes *clothes) {
     for( Clothes* item : clothesList){
         Pant* pantInStock = dynamic_cast<Pant*>(item);
         if(pantInStock != nullptr){
-            bool samePant = pantInStock->isNormal() && pant->isNormal();
+            bool samePant = (pantInStock->isNormal() && pant->isNormal()) || (!pantInStock->isNormal() && !pant->isNormal());
             if(samePant){
                 return pantInStock;
             }

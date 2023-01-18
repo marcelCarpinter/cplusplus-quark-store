@@ -16,16 +16,17 @@ bool Pant::isNormal() {
     return this->normal;
 }
 
-int Pant::getPrice() {
+double Pant::getPrice() {
     if (this->finalPrice != 0){
         return this->finalPrice;
     }
+    this->finalPrice = this->price;
     if( !this->isNormal() ){
-        this->finalPrice = this->price - (this->price * 0.12);
+        this->finalPrice = this->finalPrice - (this->finalPrice * 0.12);
     }
     string quality = this->getQuality();
     if(quality == "Premium"){
-        this->finalPrice = this->price + (this->price * 0.3);
+        this->finalPrice = this->finalPrice + (this->finalPrice * 0.3);
     }
     return this->finalPrice;
 }

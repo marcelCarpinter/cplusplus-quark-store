@@ -18,7 +18,7 @@ public:
     ~Shirt();
     bool isNormalNeck();
     bool isShortSleeve();
-    int getPrice() override;
+    double getPrice() override;
     void setSleeve(const bool &sleeve);
     void setNeck(const bool &neck);
     string toString() override;

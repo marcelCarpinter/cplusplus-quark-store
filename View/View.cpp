@@ -84,7 +84,6 @@ void View::chooseClothes() {
     string option;
     cin >> option;
     cin.get();
-    this->cleanConsole();
     if(option == "1"){
         bool sleeve = this->chooseShirtSleeve();
         bool neck = this->chooseShirtNeck();
@@ -106,7 +105,6 @@ void View::chooseClothes() {
         Pant* dummyPant = this->m_presenter->createPant(quality, price, 1, type);
         this->displayStock(dummyPant);
         int qty = this->insertQty();
-        Pant* p = new Pant(quality, price, qty, type);
         this->separatorLine();
         this->showText("Cotizador Express - Cotizar");
         this->backToMainMenuText();
@@ -156,7 +154,6 @@ int View::insertPrice() {
     this->separatorLine();
     this->showText("Insertar precio");
     std::cin >> option;
-    this->cleanConsole();
     return option;
 }
 

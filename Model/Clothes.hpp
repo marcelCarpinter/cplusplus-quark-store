@@ -15,11 +15,11 @@ private:
     int quantity;
 public:
     int price;
-    int finalPrice;
+    double finalPrice;
     Clothes(Quality quality, int p, int qty);
     ~Clothes();
     string getQuality();
-    virtual int getPrice() = 0;
+    virtual double getPrice() = 0;
     virtual string toString() = 0;
     int getQuantity();
 };
