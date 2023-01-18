@@ -88,9 +88,11 @@ void View::chooseClothes() {
         bool neck = this->chooseShirtNeck();
         Quality quality = this->insertQuality();
         int price = this->insertPrice();
+        Shirt* dummyShirt = this->m_presenter->createShirt(quality, price, 1, neck, sleeve);
+        this->displayStock(dummyShirt);
         int qty = this->insertQty();
         this->separatorLine();
-        this->showText("Cotizador Express - Cotización creada");
+        this->showText("Cotizador Express - Cotizar");
         this->backToMainMenuText();
         this->showText(this->m_presenter->createQuote(
                 this->m_presenter->createShirt(quality, price, qty, neck, sleeve),
@@ -100,11 +102,13 @@ void View::chooseClothes() {
         bool type = this->choosePantType();
         Quality quality = this->insertQuality();
         int price = this->insertPrice();
+        Pant* dummyPant = this->m_presenter->createPant(quality, price, 1, type);
+        this->displayStock(dummyPant);
         int qty = this->insertQty();
         Pant* p = new Pant(quality, price, qty, type);
         this->showText(p->getQuality());
         this->separatorLine();
-        this->showText("Cotizador Express - Cotización creada");
+        this->showText("Cotizador Express - Cotizar");
         this->backToMainMenuText();
         this->showText(this->m_presenter->createQuote(
                 this->m_presenter->createPant(quality, price, qty, type),
@@ -136,14 +140,14 @@ bool View::chooseShirtNeck() {
 }
 
 bool View::choosePantType() {
-    string option;
+    int option;
     this->separatorLine();
     this->showText("Cotizador Express - Cotizar");
     this->separatorLine();
     this->showText("El pantalón a cotizar, ¿es chupin?");
     displayYesNoMenu();
     std::cin >> option;
-    return (option == "1");
+    return (option != 1);
 }
 
 int View::insertPrice() {
@@ -216,4 +220,10 @@ void View::backToMainMenu() {
 
 void View::cleanConsole() {
     std::system("cls");
+}
+
+void View::displayStock(Clothes *clothes) {
+    int currentStock = this->m_presenter->currentStock(clothes);
+    this->showText("Información");
+    this->showText("Existen " + to_string(currentStock) + " actualmente en stock");
 }

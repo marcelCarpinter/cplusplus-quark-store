@@ -32,6 +32,7 @@ private:
     void displayYesNoMenu();
     void backToMainMenuText();
     void backToMainMenu();
+    void displayStock(Clothes* clothes);
 public:
     View();
     ~View() override;

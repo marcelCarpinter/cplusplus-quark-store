@@ -60,6 +60,9 @@ void Presentation::updateShirtSleeve(Shirt* shirt, bool sleeve) {
 }
 
 string Presentation::createQuote(Clothes *clothes, int quantity) {
+    if(!this->hasStock(clothes, quantity)){
+        return "No hay suficiente ropa en stock";
+    }
     // current date/time based on current system
     time_t now = time(0);
     tm *ltm = localtime(&now);
@@ -145,8 +148,10 @@ Pant *Presentation::findPant(Clothes *clothes) {
     for( Clothes* item : clothesList){
         Pant* pantInStock = dynamic_cast<Pant*>(item);
         if(pantInStock != nullptr){
-            bool samePant = pantInStock->isNormal() && pantInStock->isNormal();
-            return pantInStock;
+            bool samePant = pantInStock->isNormal() && pant->isNormal();
+            if(samePant){
+                return pantInStock;
+            }
         }
     }
     return nullptr;
